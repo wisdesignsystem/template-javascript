@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "name": "<%= config.name %>",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "prepare": "husky",
+    "dev": "wis dev",
+    "build": "wis build"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx}": [
+      "prettier --write",
+      "eslint"
+    ],
+    "**/*.json": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/runtime": "^7.16.7",
+    "@babel/runtime-corejs3": "^7.16.7",
+    "<%= packages['@wisdesign/cli'].name %>": "<%= packages['@wisdesign/cli'].version %>",
+    "<%= packages['@wisdesign/eslint-config'].name %>": "<%= packages['@wisdesign/eslint-config'].version %>",
+    "<%= packages['@wisdesign/prettier-config'].name %>": "<%= packages['@wisdesign/prettier-config'].version %>",
+    <% if (config.style === 'less') { %>
+    "<%= packages['@wisdesign/plugin-less'].name %>": "<%= packages['@wisdesign/plugin-less'].version %>",
+    <% } %>
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7"
+  }
+}
