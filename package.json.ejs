@@ -21,11 +21,11 @@
   "devDependencies": {
     "@babel/runtime": "7.16.7",
     "@babel/runtime-corejs3": "7.16.7",
-    "<%= packages['@wisdesign/cli'].name %>": "<%= packages['@wisdesign/cli'].version %>",
-    "<%= packages['@wisdesign/eslint-config'].name %>": "<%= packages['@wisdesign/eslint-config'].version %>",
-    "<%= packages['@wisdesign/prettier-config'].name %>": "<%= packages['@wisdesign/prettier-config'].version %>",
+    "@wisdesign/cli": "<%= packages['@wisdesign/cli'] %>",
+    "@wisdesign/eslint-config %>": "<%= packages['@wisdesign/eslint-config'] %>",
+    "@wisdesign/prettier-config": "<%= packages['@wisdesign/prettier-config'] %>",
     <% if (config.style === 'less') { %>
-    "<%= packages['@wisdesign/plugin-less'].name %>": "<%= packages['@wisdesign/plugin-less'].version %>",
+    "@wisdesign/plugin-less": "<%= packages['@wisdesign/plugin-less'] %>",
     <% } %>
     "husky": "9.0.11",
     "lint-staged": "15.2.7"

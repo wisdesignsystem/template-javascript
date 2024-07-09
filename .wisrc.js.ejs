@@ -1,11 +1,5 @@
 export default {
-  // 项目类型
   mode: '<%= config.mode %>',
-
-  <% if (config.mode === 'library') { %>
-  // 库项目名称
-  libraryName: '<%= config.name %>',
-  <% } %>
 
   // 设置别名
   alias: {},
@@ -19,7 +13,7 @@ export default {
 
   plugins: [
   <% if (config.style === 'less') { %>
-  '<%= packages['@wisdesign/plugin-less'].name %>',
+  '@wisdesign/plugin-less',
   <% } %>
   ],
 }
